@@ -1,0 +1,81 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>핀테크 아이디어 공모전 2024/2025 수상작</title><style>
+:root{
+  --bg:#f6f7fb;--card:#fff;--ink:#172033;--muted:#667085;--line:#e6e8ef;
+  --brand:#2557d6;--good:#0f766e;--warn:#b45309;--bad:#b42318;--purple:#6d28d9;
+  --shadow:0 4px 18px rgba(20,30,60,.05);--radius:16px;
+}
+*{box-sizing:border-box}
+html{font-size:16px;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",Arial,sans-serif;line-height:1.62;overflow-x:hidden}
+img,svg,video,canvas{max-width:100%;height:auto}
+a{color:var(--brand);word-break:break-word;overflow-wrap:anywhere}
+header{background:linear-gradient(135deg,#172033,#2547a8);color:white;padding:clamp(26px,5vw,46px) clamp(16px,4vw,32px)}
+header h1{margin:0 0 10px;font-size:clamp(24px,4.8vw,36px);line-height:1.22;letter-spacing:-.03em;word-break:keep-all}
+header p{margin:4px 0;color:#e5e7ff;font-size:clamp(14px,2.3vw,16px);word-break:keep-all}
+main{width:min(1180px,100%);margin:0 auto;padding:clamp(14px,3.5vw,28px)}
+section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(16px,3.2vw,24px);margin:clamp(14px,3vw,22px) 0;box-shadow:var(--shadow);overflow:hidden}
+h2{margin:0 0 14px;font-size:clamp(20px,3.5vw,26px);line-height:1.32;border-left:5px solid var(--brand);padding-left:10px;letter-spacing:-.02em;word-break:keep-all}
+h3{margin:24px 0 8px;font-size:clamp(17px,2.8vw,20px);line-height:1.35;word-break:keep-all}
+p,li,td,th{word-break:keep-all;overflow-wrap:anywhere}
+ul,ol{padding-left:1.25rem}
+.note{background:#eef4ff;border:1px solid #c7d7fe;border-radius:12px;padding:clamp(12px,2.5vw,16px);margin:12px 0;color:#233876}
+.warnbox{background:#fff7ed;border-color:#fed7aa;color:#7c2d12}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:clamp(12px,2.2vw,16px)}
+.card{border:1px solid var(--line);border-radius:12px;padding:clamp(14px,2.8vw,18px);background:#fff;min-width:0}
+.card h3{margin-top:0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:white;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:normal;border-radius:10px}
+thead,tbody,tr{width:100%}
+th,td{border:1px solid var(--line);padding:10px;vertical-align:top;min-width:120px}
+th{background:#f1f5ff;text-align:left;font-weight:700;white-space:nowrap}
+tr:nth-child(even) td{background:#fcfcff}
+.tag,.pill{display:inline-block;border-radius:999px;padding:3px 9px;font-size:12px;line-height:1.4;font-weight:700;margin:2px 3px 2px 0;background:#eef2ff;color:#3730a3;white-space:nowrap}
+.good{background:#ccfbf1;color:#115e59}.warn{background:#fef3c7;color:#92400e}.gray{background:#f2f4f7;color:#475467}.bad{background:#fee2e2;color:#991b1b}.purple{background:#ede9fe;color:#5b21b6}.gold{background:#fef3c7;color:#92400e}
+.small{font-size:13px;color:var(--muted)}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;align-items:center}
+nav a{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);color:white;text-decoration:none;border-radius:999px;padding:8px 12px;font-size:14px;line-height:1.25;min-height:36px;display:inline-flex;align-items:center;justify-content:center;transition:background .15s ease,transform .15s ease}
+nav a:hover{background:rgba(255,255,255,.22);transform:translateY(-1px)}
+.nav-break{flex-basis:100%;height:0;margin:4px 0}
+.nav-label{background:transparent;color:#facc15;border:none;padding:8px 4px 8px 0;font-size:13px;line-height:1.25;min-height:36px;display:inline-flex;align-items:center;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.nav-label::before{content:"";display:inline-block;width:18px;height:2px;background:#facc15;margin-right:8px;border-radius:2px}
+.nav-label::after{content:"";display:inline-block;width:18px;height:2px;background:rgba(250,204,21,.35);margin-left:8px;border-radius:2px}
+.toplink{display:inline-block;margin-bottom:12px;text-decoration:none}
+.footer{color:var(--muted);font-size:13px;margin:24px 0}
+.rank{font-size:clamp(18px,3vw,22px);font-weight:800;color:var(--brand)}
+.topic{border:1px solid var(--line);border-radius:16px;padding:clamp(16px,3vw,22px);margin:18px 0;background:#fff;min-width:0}
+.topic.top{border-left:8px solid #dc2626}
+.topic strong{color:#111827}.score{font-weight:800;color:var(--good)}
+@media (max-width:900px){
+  main{padding:18px}
+  section{border-radius:14px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  nav{gap:7px}
+}
+@media (max-width:640px){
+  body{line-height:1.68}
+  header{padding:24px 16px 20px}
+  header h1{font-size:24px}
+  header p{font-size:14px}
+  main{padding:12px}
+  section{padding:16px;margin:12px 0;border-radius:14px}
+  h2{font-size:20px;padding-left:9px}
+  h3{font-size:17px;margin-top:18px}
+  .grid{grid-template-columns:1fr;gap:10px}
+  .card,.topic{padding:14px;border-radius:12px}
+  nav{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+  nav a{width:100%;border-radius:12px;padding:10px 8px;font-size:13px;text-align:center;min-height:42px}
+  .nav-label{grid-column:1/-1;justify-content:center;padding:6px 0;font-size:12px}
+  .nav-break{display:none}
+  table{font-size:13px;margin-left:-2px;margin-right:-2px;width:calc(100% + 4px)}
+  th,td{padding:8px;min-width:130px}
+  .tag,.pill{font-size:11.5px;white-space:normal}
+  ul,ol{padding-left:1.1rem}
+}
+@media (max-width:380px){
+  header h1{font-size:22px}
+  nav{grid-template-columns:1fr}
+  main{padding:10px}
+  section{padding:14px}
+  th,td{min-width:115px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style></head><body><header><h1>핀테크 아이디어 공모전 2024/2025 수상작</h1><p>FIN:NECT AI와 가장 직접적으로 가까운 금융위원회/한국핀테크지원센터 공모전</p><nav><a href="../index.html">전체 목차</a><a href="macro_top10_2026.html">2026 종합상황+TOP10</a><a href="deep_agent_debate_2026.html">전문 에이전트 토론</a><a href="social_issues_2026.html">2026 사회문제</a><span class="nav-break"></span><span class="nav-label">공모전</span><a href="finnect_2024_2025.html">FIN:NECT 2024/2025</a><a href="fintech_idea.html">핀테크 아이디어</a><a href="dtestbed.html">D-테스트베드</a><a href="public_data.html">공공데이터·AI</a><a href="social_venture.html">소셜벤처·약자동행</a></nav></header><main><a class="toplink" href="../index.html">← 전체 목차로</a><section><h2>제7회 2024 핀테크 아이디어 공모전</h2><p class="small">주최 금융위원회, 주관 한국핀테크지원센터. 접수 2024.05.20~07.10, 총 94건 제출, 최종 9개 우수 아이디어 선정.</p><table><thead><tr><th>연도</th><th>수상</th><th>팀/대표</th><th>아이디어</th><th>세부 설명</th><th>출처</th></tr></thead><tbody><tr><td>2024</td><td>대상 / 금융위원장상</td><td>바이엇 주식회사, Glow.B / 김동규</td><td>AI 기반 크리에이터 가치평가 활용 중개 플랫폼</td><td>광고주 피드백, 구매 전환율 등 데이터를 분석해 크리에이터의 실제 가치를 평가. 크리에이터가 자신의 가치를 금융자산처럼 평가받고 투자·여신·매출 조달 등 금융서비스를 이용할 수 있게 하는 모델.</td><td>https://fintech.or.kr/web/board/boardContentsView.do?contents_id=40e04b986b38475fbb8a0ecc4f61e5b6&board_id=2</td></tr><tr><td>2024</td><td>우수상</td><td>토모로우 / 조용우</td><td>블록체인 기반 외국인 대상 모바일 선불카드 및 본인인증 간편결제 솔루션</td><td>외국인 금융 접근성 개선, 모바일 선불카드, 본인인증, 간편결제를 결합.</td><td>동일 출처</td></tr><tr><td>2024</td><td>우수상</td><td>트레독스 / 최형우</td><td>무역대금 결제 서류의 AI 기반 검토 서비스</td><td>무역금융/무역대금 결제 과정 서류를 AI로 검토해 오류와 리스크를 줄이는 서비스.</td><td>동일 출처</td></tr><tr><td>2024</td><td>우수상</td><td>ConnectYard / 우창범</td><td>초기 계좌개설이 불가능한 체류 외국인을 위한 디지털 급여카드 서비스</td><td>체류 외국인의 입국 초기 금융공백 해소를 위한 디지털 급여카드.</td><td>동일 출처</td></tr><tr><td>2024</td><td>장려상</td><td>아이엔 / 강우진</td><td>임차 in</td><td>임대차 생애주기 전반에 걸친 포용금융 솔루션.</td><td>동일 출처</td></tr><tr><td>2024</td><td>장려상</td><td>피블 / 이보람</td><td>LCC</td><td>은행과 수출기업 간 무역금융 중개를 위한 신용장 검수 AI 모델.</td><td>동일 출처</td></tr><tr><td>2024</td><td>장려상</td><td>NEXA / 이시우</td><td>AI SaaS 기반 비상장기업 분석 솔루션</td><td>비상장기업 정보를 분석하는 AI SaaS.</td><td>동일 출처</td></tr><tr><td>2024</td><td>장려상</td><td>서강대 기술경영전문대학원 Global M&P / 서병규</td><td>모바일 교통카드 기반 동아시아 관광 핀테크 서비스</td><td>교통카드 기반 관광·결제 핀테크.</td><td>동일 출처</td></tr><tr><td>2024</td><td>장려상</td><td>메이크델타 / 김민준</td><td>트레이더캣</td><td>직장인 투자자를 위한 이상거래 감지 AI 솔루션.</td><td>동일 출처</td></tr></tbody></table></section><section><h2>제8회 2025 핀테크 아이디어 공모전</h2><p class="small">접수 2025.08.04~10.14, 총 187건 제출, 대상 1팀·우수상 3팀·장려상 5팀.</p><table><thead><tr><th>연도</th><th>수상</th><th>팀/대표</th><th>아이디어</th><th>세부 설명</th><th>출처</th></tr></thead><tbody><tr><td>2025</td><td>대상 / 금융위원장상</td><td>씽크플랜두 / 최진열</td><td>AI Financial Gateway: AI가 실행하는 금융결제 인프라</td><td>AI 에이전트에게 명령하면 조회, 결제, 주문 완료까지 실행하는 금융 인프라. 청구요금 결제, 배달주문, 식당 예약 등 실행형 금융 UX.</td><td>https://fintech.or.kr/web/board/boardContentsView.do?contents_id=4d6cbc320e194a408cac8644a847ca7e&board_id=2</td></tr><tr><td>2025</td><td>우수상</td><td>부디클 / 김대용</td><td>AI 부동산 거래 자동 통합 플랫폼</td><td>AI가 계약·결제·등기·세금납부를 자동 통합해 안전하고 신뢰성 높은 부동산 거래를 완성시키는 플랫폼.</td><td>동일 출처</td></tr><tr><td>2025</td><td>우수상</td><td>AI 안심플랜 / 배찬조</td><td>AI 진단 기반 재무 리스크 관리 플랫폼</td><td>고객 재무 상황을 정밀 분석하고 선제적으로 리스크를 관리.</td><td>동일 출처</td></tr><tr><td>2025</td><td>우수상</td><td>SHIN기술 / 이제용</td><td>차세대 3D 서명 플랫폼</td><td>빛이 차단된 공간에서 3D로 서명하는 물리적 도용 방지형 인증/서명 플랫폼.</td><td>동일 출처</td></tr><tr><td>2025</td><td>장려상</td><td>풍년지킴이 / 공희진</td><td>AI 생산 예측 기반 맞춤 금융 + 기상 연동 자동 보상 보험</td><td>농업 생산 예측, 맞춤 금융, 기상 연동 자동 보험 보상을 결합.</td><td>동일 출처</td></tr><tr><td>2025</td><td>장려상</td><td>Flexpay / 최현진</td><td>프리랜서 세금·소득관리 AI+블록체인 솔루션</td><td>프리랜서 소득·세무 관리 문제를 AI와 블록체인으로 해결.</td><td>동일 출처</td></tr><tr><td>2025</td><td>장려상</td><td>빌지 / 김현호</td><td>독촉 없는 B2B 자동화 청구 플랫폼</td><td>B2B 거래에서 청구/정산 자동화로 결제 흐름 관리.</td><td>동일 출처</td></tr><tr><td>2025</td><td>장려상</td><td>Travée / 이재우</td><td>스마트 컨트랙트 기반 여행자 보험 핀테크</td><td>여행자 보험 가입·청구·보상 자동화.</td><td>동일 출처</td></tr><tr><td>2025</td><td>장려상</td><td>DRiVE / 이철민</td><td>자율주행 보험 서비스 구조 혁신</td><td>블록체인 기반 책임 산정과 동적 요율로 자율주행 보험 구조 설계.</td><td>동일 출처</td></tr></tbody></table></section><section><h2>FIN:NECT AI 참가 참고 포인트</h2><ul><li>2025 대상은 단순 추천이 아니라 <b>AI가 실제 결제·주문·예약을 실행</b>하는 구조였다.</li><li>AI+계약·결제·보험·인증·무역금융처럼 구체 금융 프로세스와 묶어야 한다.</li><li>외국인, 프리랜서, 농업, 자율주행 등 타깃이 좁을수록 심사에서 문제의식이 선명하다.</li><li>데이터 기반 가치평가·리스크 관리·이상거래 탐지는 반복적으로 수상했다.</li></ul></section><div class="footer">작성 기준: 2026-04-29 공개 웹자료 조사. 공개되지 않은 세부정보는 미공개/미확인으로 표기.</div></main></body></html>
