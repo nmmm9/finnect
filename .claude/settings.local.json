@@ -6,7 +6,9 @@
       "Bash(git mv *)",
       "Bash(git commit *)",
       "Bash(git push *)",
-      "Bash(gh api *)"
+      "Bash(gh api *)",
+      "Bash(git rm *)",
+      "Bash(git *)"
     ]
   }
 }

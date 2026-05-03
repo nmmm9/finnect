@@ -1,0 +1,99 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FIN:NECT 2026 AI 분야 주제 선정 최종 분석</title><style>
+
+:root{
+  --bg:#f6f7fb;--card:#fff;--ink:#172033;--muted:#667085;--line:#e6e8ef;
+  --brand:#2557d6;--good:#0f766e;--warn:#b45309;--bad:#b42318;--purple:#6d28d9;
+  --shadow:0 4px 18px rgba(20,30,60,.05);--radius:16px;
+}
+*{box-sizing:border-box}
+html{font-size:16px;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",Arial,sans-serif;line-height:1.62;overflow-x:hidden}
+img,svg,video,canvas{max-width:100%;height:auto}
+a{color:var(--brand);word-break:break-word;overflow-wrap:anywhere}
+header{background:linear-gradient(135deg,#172033,#2547a8);color:white;padding:clamp(26px,5vw,46px) clamp(16px,4vw,32px)}
+header h1{margin:0 0 10px;font-size:clamp(24px,4.8vw,36px);line-height:1.22;letter-spacing:-.03em;word-break:keep-all}
+header p{margin:4px 0;color:#e5e7ff;font-size:clamp(14px,2.3vw,16px);word-break:keep-all}
+main{width:min(1180px,100%);margin:0 auto;padding:clamp(14px,3.5vw,28px)}
+section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(16px,3.2vw,24px);margin:clamp(14px,3vw,22px) 0;box-shadow:var(--shadow);overflow:hidden}
+h2{margin:0 0 14px;font-size:clamp(20px,3.5vw,26px);line-height:1.32;border-left:5px solid var(--brand);padding-left:10px;letter-spacing:-.02em;word-break:keep-all}
+h3{margin:24px 0 8px;font-size:clamp(17px,2.8vw,20px);line-height:1.35;word-break:keep-all}
+p,li,td,th{word-break:keep-all;overflow-wrap:anywhere}
+ul,ol{padding-left:1.25rem}
+.note{background:#eef4ff;border:1px solid #c7d7fe;border-radius:12px;padding:clamp(12px,2.5vw,16px);margin:12px 0;color:#233876}
+.warnbox{background:#fff7ed;border-color:#fed7aa;color:#7c2d12}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:clamp(12px,2.2vw,16px)}
+.card{border:1px solid var(--line);border-radius:12px;padding:clamp(14px,2.8vw,18px);background:#fff;min-width:0}
+.card h3{margin-top:0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:white;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:normal;border-radius:10px}
+thead,tbody,tr{width:100%}
+th,td{border:1px solid var(--line);padding:10px;vertical-align:top;min-width:120px}
+th{background:#f1f5ff;text-align:left;font-weight:700;white-space:nowrap}
+tr:nth-child(even) td{background:#fcfcff}
+.tag,.pill{display:inline-block;border-radius:999px;padding:3px 9px;font-size:12px;line-height:1.4;font-weight:700;margin:2px 3px 2px 0;background:#eef2ff;color:#3730a3;white-space:nowrap}
+.good{background:#ccfbf1;color:#115e59}.warn{background:#fef3c7;color:#92400e}.gray{background:#f2f4f7;color:#475467}.bad{background:#fee2e2;color:#991b1b}.purple{background:#ede9fe;color:#5b21b6}.gold{background:#fef3c7;color:#92400e}
+.small{font-size:13px;color:var(--muted)}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;align-items:center}
+nav a{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);color:white;text-decoration:none;border-radius:999px;padding:8px 12px;font-size:14px;line-height:1.25;min-height:36px;display:inline-flex;align-items:center;justify-content:center;transition:background .15s ease,transform .15s ease}
+nav a:hover{background:rgba(255,255,255,.22);transform:translateY(-1px)}
+.nav-break{flex-basis:100%;height:0;margin:4px 0}
+.nav-label{background:transparent;color:#facc15;border:none;padding:8px 4px 8px 0;font-size:13px;line-height:1.25;min-height:36px;display:inline-flex;align-items:center;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.nav-label::before{content:"";display:inline-block;width:18px;height:2px;background:#facc15;margin-right:8px;border-radius:2px}
+.nav-label::after{content:"";display:inline-block;width:18px;height:2px;background:rgba(250,204,21,.35);margin-left:8px;border-radius:2px}
+.toplink{display:inline-block;margin-bottom:12px;text-decoration:none}
+.footer{color:var(--muted);font-size:13px;margin:24px 0}
+.rank{font-size:clamp(18px,3vw,22px);font-weight:800;color:var(--brand)}
+.topic{border:1px solid var(--line);border-radius:16px;padding:clamp(16px,3vw,22px);margin:18px 0;background:#fff;min-width:0}
+.topic.top{border-left:8px solid #dc2626}
+.topic strong{color:#111827}.score{font-weight:800;color:var(--good)}
+@media (max-width:900px){
+  main{padding:18px}
+  section{border-radius:14px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  nav{gap:7px}
+}
+@media (max-width:640px){
+  body{line-height:1.68}
+  header{padding:24px 16px 20px}
+  header h1{font-size:24px}
+  header p{font-size:14px}
+  main{padding:12px}
+  section{padding:16px;margin:12px 0;border-radius:14px}
+  h2{font-size:20px;padding-left:9px}
+  h3{font-size:17px;margin-top:18px}
+  .grid{grid-template-columns:1fr;gap:10px}
+  .card,.topic{padding:14px;border-radius:12px}
+  nav{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+  nav a{width:100%;border-radius:12px;padding:10px 8px;font-size:13px;text-align:center;min-height:42px}
+  .nav-label{grid-column:1/-1;justify-content:center;padding:6px 0;font-size:12px}
+  .nav-break{display:none}
+  table{font-size:13px;margin-left:-2px;margin-right:-2px;width:calc(100% + 4px)}
+  th,td{padding:8px;min-width:130px}
+  .tag,.pill{font-size:11.5px;white-space:normal}
+  ul,ol{padding-left:1.1rem}
+}
+@media (max-width:380px){
+  header h1{font-size:22px}
+  nav{grid-template-columns:1fr}
+  main{padding:10px}
+  section{padding:14px}
+  th,td{min-width:115px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+.hero-rank{font-size:clamp(28px,6vw,48px);font-weight:900;color:#dc2626;line-height:1.1;margin:8px 0}
+.scorebox{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.scorebox span{background:#111827;color:white;border-radius:999px;padding:8px 12px;font-weight:800}
+</style></head><body><header><h1>FIN:NECT 2026 AI 분야 주제 선정 최종 분석</h1><p>처음부터 다시 본 공모전·정책·사회문제·MVP 가능성 기반 최종 추천</p><nav><a href="index.html">전체 목차</a><a href="finnect_contest_research_pages/macro_top10_2026.html">2026 종합상황+TOP10</a><a href="finnect_contest_research_pages/deep_agent_debate_2026.html">전문 에이전트 토론</a><a href="finnect_contest_research_pages/social_issues_2026.html">2026 사회문제</a><span class="nav-break"></span><span class="nav-label">공모전</span><a href="finnect_contest_research_pages/finnect_2024_2025.html">FIN:NECT 2024/2025</a><a href="finnect_contest_research_pages/fintech_idea.html">핀테크 아이디어</a><a href="finnect_contest_research_pages/dtestbed.html">D-테스트베드</a><a href="finnect_contest_research_pages/public_data.html">공공데이터·AI</a><a href="finnect_contest_research_pages/social_venture.html">소셜벤처·약자동행</a></nav></header><main>
+<a class="toplink" href="index.html">← 전체 목차로</a>
+<section><h2>0. 최종 결론</h2><div class="hero-rank">1순위: SafeBank AI</div><div class="note"><b>추천 주제:</b> “송금 버튼을 누르기 전, 금융사기를 막는 AI 안전벨트”<br><br><b>한 줄 설명:</b> SafeBank AI는 송금 직전 대화 내용과 거래 맥락을 분석해 보이스피싱·스미싱·딥페이크 사칭·투자 리딩방 사기를 감지하고, 사용자가 피해를 입기 전에 송금을 멈추도록 돕는 은행 앱 내 AI 보호 서비스다.</div><div class="scorebox"><span>문제 심각성 19/20</span><span>은행 적합성 20/20</span><span>MVP 18/20</span><span>발표 임팩트 15/15</span><span>총점 90/100</span></div><p>처음부터 다시 봐도 1순위는 SafeBank AI가 맞다. 이유는 간단하다. 2026년 금융정책은 보이스피싱·스미싱·가상자산 사기 대응을 위해 금융회사, 통신사, 수사기관, 전자금융업자, 가상자산사업자 간 정보공유와 선제 차단으로 움직이고 있다. 이 흐름과 가장 직접적으로 맞는 AI 주제가 “송금 전 금융사기 방어”다.</p></section>
+<section><h2>1. 왜 SafeBank AI가 가장 유리한가</h2><div class="grid"><div class="card"><span class="tag good">정책 타이밍</span><h3>2026년 정책과 정면으로 맞음</h3><p>금융위는 보이스피싱 대응을 위해 금융·통신·수사·전자금융·가상자산 정보를 공유하는 방향으로 제도를 정비하고 있다. SafeBank AI는 이 정책 흐름을 사용자 화면에서 구현하는 아이디어다.</p></div><div class="card"><span class="tag good">은행 니즈</span><h3>은행이 실제로 원할 기능</h3><p>은행 입장에서는 보이스피싱 피해 예방, 고객 민원 감소, 신뢰도 상승, 사회적 책임을 동시에 얻을 수 있다. “은행 앱 안의 AI 안전벨트”라는 포지션이 강하다.</p></div><div class="card"><span class="tag good">데모 가능</span><h3>2~4주 MVP가 현실적</h3><p>실제 계좌망 없이도 문자/카톡/통화요약/송금정보 샘플을 넣고 위험점수, 위험문장, 송금보류 버튼, 신고 체크리스트를 보여줄 수 있다.</p></div><div class="card"><span class="tag good">발표 임팩트</span><h3>심사위원이 바로 이해함</h3><p>“피해자가 송금하려는 순간 AI가 멈춘다”는 장면은 설명이 거의 필요 없다. FIN:NECT 발표에서 가장 직관적인 시연이 가능하다.</p></div></div></section>
+<section><h2>2. 평가 기준</h2><table><thead><tr><th>기준</th><th>배점</th><th>의미</th></tr></thead><tbody><tr><td>문제 심각성</td><td>20</td><td>피해 규모, 긴급성, 사회적 공감도</td></tr><tr><td>FIN:NECT/은행 적합성</td><td>20</td><td>은행·핀테크가 실제로 관심 가질 문제인지</td></tr><tr><td>중복 회피</td><td>15</td><td>기존 FIN:NECT·유사 공모전과 덜 겹치는지</td></tr><tr><td>MVP 가능성</td><td>20</td><td>2~4주 안에 시연 가능한지</td></tr><tr><td>발표 임팩트</td><td>15</td><td>심사위원이 바로 이해할 수 있는 스토리와 화면이 있는지</td></tr><tr><td>규제/개인정보 안정성</td><td>10</td><td>위험을 통제할 수 있는 설계인지</td></tr></tbody></table></section>
+<section><h2>3. 후보 주제 점수표</h2><table><thead><tr><th>순위</th><th>후보</th><th>내용</th><th>문제</th><th>적합성</th><th>중복회피</th><th>MVP</th><th>임팩트</th><th>리스크</th><th>총점</th><th>판단</th></tr></thead><tbody><tr><td><b>1</b></td><td>SafeBank AI: 송금 전 금융사기 방어</td><td>송금 직전 문자/카톡/통화요약/송금목적/금액을 분석해 보이스피싱·스미싱·투자리딩방·가족/기관 사칭 위험을 탐지하고, 사용자가 송금을 멈추도록 개입하는 은행 앱 내 AI 안전벨트.</td><td>19</td><td>20</td><td>12</td><td>18</td><td>15</td><td>6</td><td><b>90</b></td><td>최종 1순위. 2026년 정책·사회문제·은행 니즈·MVP·발표 임팩트가 가장 잘 맞음.</td></tr><tr><td><b>2</b></td><td>마이데이터 기반 금융회복 AI</td><td>대출·카드·소득·상환정보를 바탕으로 금리인하요구권, 채무조정, 정책금융, 개인회생 서류 준비 가능성을 알려주는 소비자보호 AI.</td><td>18</td><td>18</td><td>13</td><td>15</td><td>13</td><td>5</td><td><b>82</b></td><td>정책 적합성은 매우 좋지만 개인정보/마이데이터 리스크와 구현 범위 관리가 중요.</td></tr><tr><td><b>3</b></td><td>소상공인 금융회복·재기지원 AI</td><td>매출·고정비·대출상환·상권변화를 분석해 연체/폐업 위험을 조기경보하고 정책자금·상환유예·새출발기금 등을 추천하는 AI.</td><td>18</td><td>19</td><td>11</td><td>16</td><td>13</td><td>7</td><td><b>84</b></td><td>은행/정책 방향과 잘 맞음. 다만 대안신용평가·소상공인 지원은 유사 사례가 많아 “재기지원”으로 좁혀야 함.</td></tr><tr><td><b>4</b></td><td>고령층 쉬운말 금융안전 비서</td><td>금융앱 경고, 약관, 송금 위험, 상품 설명을 쉬운말·큰글씨·음성으로 바꾸고 가족확인/송금보류를 도와주는 AI.</td><td>18</td><td>18</td><td>12</td><td>19</td><td>14</td><td>8</td><td><b>89</b></td><td>SafeBank AI와 결합하면 가장 강함. 단독으로는 쉬운말 변환이 평범해 보일 수 있음.</td></tr><tr><td><b>5</b></td><td>전세사기 피해 후 금융회복 AI</td><td>전세사기 피해자가 대출·신용·주거이전·지원제도·필요서류를 단계별로 정리하고 은행 상담 리포트를 생성하는 AI.</td><td>20</td><td>15</td><td>13</td><td>15</td><td>15</td><td>5</td><td><b>83</b></td><td>사회문제성은 강함. 단 금융 AI로 보이게 하려면 법률판단이 아니라 신용/대출/상환 회복에 집중해야 함.</td></tr><tr><td><b>6</b></td><td>AI 금융계약 위험조항 탐지기</td><td>대출·보험·리스·할부 약관에서 중도상환수수료, 자동갱신, 면책, 연체이자, 개인정보 제공 등 위험조항을 쉬운말로 설명.</td><td>16</td><td>16</td><td>14</td><td>18</td><td>12</td><td>8</td><td><b>84</b></td><td>중복 회피가 좋고 개인정보 리스크가 낮음. 다만 FIN:NECT의 금융사회 안전망 임팩트는 SafeBank보다 약함.</td></tr></tbody></table></section>
+<section><h2>4. 최종 TOP 3</h2><div class="topic top"><div class="rank">1위 SafeBank AI — 송금 전 금융사기 방어</div><p><b>최종 선택 추천.</b> 보이스피싱·스미싱·딥페이크 사칭·투자리딩방 사기를 송금 전 단계에서 막는 AI. 정책 적합성, 은행 도입 가능성, MVP, 발표 임팩트가 모두 강하다.</p><h3>핵심 기능</h3><ul><li>문자/카톡/통화요약/URL/송금목적 입력</li><li>사기 유형 분류: 가족사칭, 기관사칭, 대환대출, 리딩방, 중고거래, 가상자산 유도</li><li>위험문장 하이라이트와 쉬운말 설명</li><li>송금보류, 가족확인, 은행상담, 경찰/금감원 신고 체크리스트</li><li>고령층 모드: 큰 글씨, 쉬운말, 음성안내</li></ul></div><div class="topic"><div class="rank">2위 고령층 쉬운말 금융안전 비서</div><p>SafeBank AI와 결합하면 매우 강하다. 단독 주제보다는 SafeBank의 고령층 모드로 흡수하는 것을 추천한다.</p></div><div class="topic"><div class="rank">3위 소상공인 금융회복·재기지원 AI</div><p>정책 방향과 맞지만 대안신용평가/소상공인 지원은 유사 사례가 많다. 한다면 “대출 추천”보다 “연체 전 재기지원”으로 좁혀야 한다.</p></div></section>
+<section><h2>5. 피해야 할 주제</h2><div class="note warnbox"><ul><li><b>단순 투자추천/포트폴리오 추천:</b> 기존 FIN:NECT 손PB류, ETF 큐레이션류와 겹칠 위험이 크다.</li><li><b>크리에이터 가치평가:</b> 2024 FIN:NECT 및 핀테크 아이디어 공모전에서 유사 흐름이 확인된다.</li><li><b>소상공인 대출/매출채권 조달만 강조:</b> 이미 대상/유사 수상작과 겹칠 수 있다.</li><li><b>그냥 금융 챗봇:</b> 너무 흔하고 발표 임팩트가 약하다.</li><li><b>전세사기 예방만 하는 서비스:</b> 기존 유사성이 있으므로 피해 후 금융회복으로 바꿔야 한다.</li></ul></div></section>
+<section><h2>6. 추천 MVP 화면 구성</h2><ol><li><b>피해 시나리오 입력:</b> “검찰 사칭 전화 후 안전계좌로 500만원 송금 요구” 같은 샘플 대화/문자 입력.</li><li><b>AI 위험 분석:</b> 위험점수 92점, 사기유형 “기관 사칭 + 긴급 송금 유도” 표시.</li><li><b>위험문장 하이라이트:</b> “지금 바로”, “비밀로”, “안전계좌”, “원격앱 설치” 같은 문장을 빨간색으로 표시.</li><li><b>쉬운말 설명:</b> 고령층도 이해하게 “검찰은 돈을 안전계좌로 보내라고 하지 않습니다.”라고 안내.</li><li><b>행동 버튼:</b> 송금 보류, 가족에게 확인, 은행 상담 연결, 경찰/금감원 신고 체크리스트.</li><li><b>사후 회복:</b> 이미 송금했다면 지급정지 요청, 피해신고 서류, 대화증거 정리 리포트 생성.</li></ol></section>
+<section><h2>7. 발표용 최종 문구</h2><div class="note"><p><b>서비스명:</b> SafeBank AI</p><p><b>슬로건:</b> 송금 버튼을 누르기 전, AI가 한 번 더 붙잡습니다.</p><p><b>한 줄 소개:</b> SafeBank AI는 보이스피싱·스미싱·딥페이크 사칭·투자리딩방 사기를 송금 직전에 탐지하고, 쉬운 설명과 행동 버튼으로 실제 피해를 막는 은행 앱 내 AI 안전벨트입니다.</p><p><b>차별점:</b> 기존 사기탐지는 금융회사 내부 이상거래 탐지에 머무르는 경우가 많지만, SafeBank AI는 사용자가 송금하기 직전의 의사결정 순간에 개입한다.</p></div></section>
+<section><h2>8. 근거 출처</h2><table><thead><tr><th>출처</th><th>확인 내용</th><th>URL</th><th>신뢰도</th></tr></thead><tbody><tr><td>금융위원회 보이스피싱 대응 하위규정 입법예고</td><td>금융회사·통신사·수사기관·금감원·전자금융업자·가상자산사업자 간 의심정보 공유 범위 구체화. 계좌·거래·가상자산·악성앱·위조신분증 정보 등이 연결됨.</td><td><a href="https://www.fsc.go.kr/no010101/86607">https://www.fsc.go.kr/no010101/86607</a></td><td><span class="pill good">매우 높음</span></td></tr><tr><td>금융위원회 2026 가계부채 관리방안</td><td>가계대출 증가율 관리, 가계부채/GDP 하향 목표 등 취약차주 조기관리 필요성 근거.</td><td><a href="https://www.fsc.go.kr/no010101/86606">https://www.fsc.go.kr/no010101/86606</a></td><td><span class="pill good">매우 높음</span></td></tr><tr><td>금융위원회 소상공인 신용평가체계 개편 T/F</td><td>금융이력 부족 소상공인의 은행권 대출 접근성 개선, 소상공인 특화 신용평가체계 개편 추진.</td><td><a href="https://www.fsc.go.kr/no010101/86674">https://www.fsc.go.kr/no010101/86674</a></td><td><span class="pill good">매우 높음</span></td></tr><tr><td>금융위원회 청년미래적금 출시 준비</td><td>청년 자산형성·정책금융 흐름 확인. 청년 금융주제는 가능하지만 차별화 필요.</td><td><a href="https://www.fsc.go.kr/no010101/86767">https://www.fsc.go.kr/no010101/86767</a></td><td><span class="pill good">높음</span></td></tr><tr><td>국가법령정보센터 AI기본법</td><td>인공지능 발전과 신뢰 기반 조성 등에 관한 기본법 2026.1.22 시행. 금융 AI도 신뢰성·설명가능성·안전장치가 중요.</td><td><a href="https://www.law.go.kr/법령/인공지능발전과신뢰기반조성등에관한기본법">https://www.law.go.kr/법령/인공지능발전과신뢰기반조성등에관한기본법</a></td><td><span class="pill good">매우 높음</span></td></tr><tr><td>한국핀테크지원센터 2024 FIN:NECT 수상기업</td><td>2024 FIN:NECT에서 소상공인 자금조달, 크리에이터 가치평가, AI 재무설계, 이상거래 감지 등 확인. 중복 회피 근거.</td><td><a href="https://blog.naver.com/koreafintech/223606660622">https://blog.naver.com/koreafintech/223606660622</a></td><td><span class="pill good">높음</span></td></tr><tr><td>한국핀테크지원센터 2025 FIN:NECT 챌린지 현장스케치</td><td>2025 FIN:NECT는 지역별 금융문제/개선방안 아이디어 발굴 및 고도화 사업. 금융생활 개선 자유주제 흐름 확인.</td><td><a href="https://blog.naver.com/koreafintech/223976680357">https://blog.naver.com/koreafintech/223976680357</a></td><td><span class="pill good">높음</span></td></tr><tr><td>오픈핀테크 얼라이언스 2025 사업아이디어 공모전</td><td>공동포인트 결제, AI 이상거래 탐지, 공동 KYC/AML 등 유사 주제 확인.</td><td><a href="https://ofalliance.or.kr/bbs/board.php?bo_table=s3_1&wr_id=2">https://ofalliance.or.kr/bbs/board.php?bo_table=s3_1&wr_id=2</a></td><td><span class="pill good">높음</span></td></tr></tbody></table></section>
+<section><h2>9. 최종 판단</h2><p>FIN:NECT 2026 AI 분야는 “AI로 금융을 편하게 한다”보다 “AI로 금융 피해를 줄이고, 취약한 사람이 다시 금융권 안으로 들어오게 한다”가 더 강하다. 그래서 최종 추천은 SafeBank AI다.</p><p>단, 이름과 범위는 <b>SafeBank AI = 송금 전 금융사기 방어 + 고령층 쉬운말 설명 + 피해 후 신고/회복 체크리스트</b>로 잡는 것이 좋다. 이렇게 하면 보이스피싱, AI 딥페이크, 가상자산 사기, 고령층 금융포용, 금융소비자보호를 한 번에 묶을 수 있다.</p></section>
+<div class="footer">작성 기준: 2026-05-03. 기존 로컬 자료와 2026년 공식 정책/공모전 공개자료를 재검토해 작성.</div>
+</main></body></html>
